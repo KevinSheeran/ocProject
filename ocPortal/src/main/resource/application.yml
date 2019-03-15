@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  #freemarker config
+spring:
+  freemarker:
+    cache: false
+    check-template-location: true
+    content-type: text/html
+    suffix: .html
+    template-loader-path: classpath:/templates/
+  #jdbc config
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://106.13.74.226:1111/ocdb?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    username: ocdb
+    password: fN7z3DPdxSAL8zrP
+  data:
+    solr:
+      host: http://localhost:8983/solr/myDataCore
+mybatis:
+  type-aliases-package: com.online.college
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
